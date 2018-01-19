@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 require('../styles/calculator.scss');
 import Datetime from 'react-datetime'
-
+require('../styles/react-datetime.css');
 
 
 
@@ -45,7 +45,7 @@ export default class Calculator extends Component {
           </div>
           <div className="picker">
             <p>ARRIVING</p>
-            <Datetime open={false} closeOnSelect={false} timeFormat={false} value={secondDate} onChange={this.secondDateChange}/>
+            <Datetime open={false}  closeOnSelect={false} timeFormat={false} value={secondDate} onChange={this.secondDateChange}/>
           </div>
           <div className="output">
             <p>DAYZ</p>
