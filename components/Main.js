@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Route } from 'react-router-dom'
 import Info from './Info'
-import Calculator from './Calculator'
+import Calendar from './Calendar'
 import Contacts from './Contacts'
 require('../styles/main.scss');
 export default class Main extends Component {
