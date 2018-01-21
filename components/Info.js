@@ -59,53 +59,20 @@ export default class Info extends Component {
                  <pre>npm run dev</pre>
                 </InfoBlock>
                 <InfoBlock icon='/img/icon-flag.png'
-                 iconBackGr="#00c2a5" title="Dependencies">
-                 <table>
-                   <tr>
-                     <th>Package</th>
-                     <th>Version</th>
-                   </tr>
-                   <tr>
-                     <td>react</td>
-                     <td>16.2.0</td>
-                   </tr>
-                   <tr>
-                     <td>react-dom</td>
-                     <td>16.2.0</td>
-                   </tr>
-                   <tr>
-                     <td>react-router</td>
-                     <td>4.2.0</td>
-                   </tr>
-                   <tr>
-                     <td>react-router-dom</td>
-                     <td>4.2.2</td>
-                   </tr>
-                   <tr>
-                     <td>webpack</td>
-                     <td>3.10.0</td>
-                   </tr>
-                   <tr>
-                     <td>webpack-dev-server</td>
-                     <td>2.11.0</td>
-                   </tr>
-                   <tr>
-                     <td>babel-preset-es2015</td>
-                     <td>6.24.1</td>
-                   </tr>
-                   <tr>
-                     <td>react-datetime</td>
-                     <td>2.11.1</td>
-                   </tr>
-                 </table>
+                 iconBackGr="#00c2a5" title="Used components and packages">
+                 App was built from scratch, I use npm for packages managing, webpack-dev-server for live reloading,
+                 react-datetime and moment.js in Calendar component. However,
+                 in task layout was used other way to render weekday name(only first letter instead of two letters as in date picker from package),
+                 and there was not api to change this, I fork this package and make change directly in scr file. So, in package.json you can see link to my github fork of that repo.
+                 Also, according to the api, I add handlers and methods and change react-datetime.css file to match the appearance of the layout.
+
                 </InfoBlock>
                 <InfoBlock icon='/img/icon-eye.png'
-                 iconBackGr="#ecbf00" title="Notes">
-                  <ul>
-                    <li>change Calendar component whith custom design from psd layout</li>
-                    <li>rewrite Dependencies chapter(get data from package.json directly)</li>
-                    <li>this list may be updated soon...</li>
-                  </ul>
+                 iconBackGr="#ecbf00" title="Calendar use guide">
+                 You can use Calendar to count number of days in the trip. Note, that you can`t choose impossible dates of start or finish journey, it will be very strange if you arrive earlier than leaving )
+                 
+
+
                 </InfoBlock>
             </div>
         )

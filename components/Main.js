@@ -9,7 +9,7 @@ export default class Main extends Component {
         return (
           <main>
             <Route exact path='/' component={Info}/>
-            <Route path='/calendar' component={Calculator}/>
+            <Route path='/calendar' component={Calendar}/>
             <Route path='/contacts' component={Contacts}/>
           </main>
         )

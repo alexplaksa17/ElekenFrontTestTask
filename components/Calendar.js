@@ -81,7 +81,7 @@ class DatePicker extends Component {
   }
 }
 
-export default class Calculator extends Component{
+export default class Calendar extends Component{
   constructor(props){
     super(props);
     this.state={
