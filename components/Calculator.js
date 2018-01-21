@@ -100,7 +100,6 @@ export default class Calculator extends Component{
     this.findDiff(this.state.firstDate,newDate);
   }
   findDiff=(a,b)=>{
-    //let diff  =  Math.abs(b-a)/(1000*60*60*24);
     this.setState({
       diff:b.diff(a, 'days')+1,
     })
@@ -134,9 +133,11 @@ export default class Calculator extends Component{
       activeWindow:'second'
     })
   }
+  //to avoid selecting dates before departure day
   validArrivingDates=(currentDate)=>{
     return ((currentDate>this.state.firstDate)|| (this.state.firstDate.format('ll')==currentDate.format('ll')))
   }
+  //to avoid selecting dates after arriving day
   validDepartureDates=(currentDate)=>{
     return ((currentDate<this.state.secondDate)|| (this.state.secondDate.format('ll')==currentDate.format('ll')))
   }
@@ -185,93 +186,3 @@ export default class Calculator extends Component{
 
 
 }
-
-
-
-
-/*
-constructor(props){
-  super(props);
-  this.state={
-    date: this.props.date,
-  }
-  render()
-
-  {
-    <div>
-      <span className="inputName">DEPARTURE</span>
-    </div>
-
-
-  }
-}
-}
-
-
-export default class Calculator extends Component {
-constructor(props){
-  super(props);
-  this.state={
-    firstDate:new Date(),
-    secondDate:new Date(),
-    diff: 0,
-
-  }
-}
-findDiff=(a,b)=>{
-  let diff  =  Math.abs(b-a)/(1000*60*60*24);
-  this.setState({
-    diff:diff,
-  })
-}
-firstDateChange=(sendDate)=>{
-  console.log(sendDate._i);
-  this.setState({firstDate: sendDate})
-  this.findDiff(sendDate,this.state.secondDate);
-}
-secondDateChange=(sendDate)=>{
-  console.log(sendDate);
-  this.setState({secondDate: sendDate})
-  this.findDiff(this.state.firstDate,sendDate);
-}
-isInBetween=(date)=>{
-  const {firstDate,secondDate}=this.state;
-  const inIt =((firstDate<date.date()) && (secondDate>date.date()))
-  return inIt;
-}
-renderDay = ( props, currentDate, selectedDate )=>{
-  if (this.isInBetween(currentDate)) {
-    return <td {...props} style={{backgroundColor: "#eaf1fc"}}>{currentDate.date() }</td>;
-  }
-  else{
-    return <td {...props} >{currentDate.date() }</td>;
-  }
-}
-
-render () {
-  const {firstDate,secondDate,diff}=this.state;
-  return (
-    <div>
-      <h1>Calendar</h1>
-      <div className="calculator__block">
-        <div className="picker">
-          <span>DEPARTURE</span>
-          <Datetime closeOnSelect={false} timeFormat={false} value={firstDate} onChange={this.firstDateChange}
-            renderDay={ this.renderDay }
-          />
-        </div>
-        <div className="picker">
-          <span>ARRIVING</span>
-          <Datetime closeOnSelect={false} timeFormat={false} value={secondDate} onChange={this.secondDateChange}
-            renderDay={ this.renderDay }
-          />
-        </div>
-        <div className="output">
-          <span class="output__name">DAYS</span>
-          <span>{diff}</span>
-        </div>
-      </div>
-    </div>
-    )
-  }
-*/
