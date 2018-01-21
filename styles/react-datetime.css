@@ -1,16 +1,15 @@
 .rdt {
   position: relative;
+  padding: 2px;
 }
 .rdtPicker {
   display: none;
   position: absolute;
-  width: 250px;
-  padding: 4px;
+  width: 220px;
+  padding: 10px;
   margin-top: 1px;
-  z-index: 99999 !important;
   background: #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,.1);
-  border: 1px solid #f9f9f9;
+
 }
 .rdtOpen .rdtPicker {
   display: block;
@@ -31,7 +30,7 @@
 .rdtPicker td,
 .rdtPicker th {
   text-align: center;
-  height: 28px;
+  height: 26px;
 }
 .rdtPicker td {
   cursor: pointer;
@@ -44,26 +43,17 @@
   background: #eeeeee;
   cursor: pointer;
 }
-.rdtPicker td.rdtOld,
-.rdtPicker td.rdtNew {
-  color: #999999;
-}
+
 .rdtPicker td.rdtToday {
   position: relative;
 }
 .rdtPicker td.rdtToday:before {
-  content: '';
-  display: inline-block;
-  border-left: 7px solid transparent;
-  border-bottom: 7px solid #428bca;
-  border-top-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  bottom: 4px;
-  right: 4px;
+
 }
 .rdtPicker td.rdtActive,
 .rdtPicker td.rdtActive:hover {
-  background-color: #428bca;
+  border-radius: 3px;
+  background-color: #1368d9;
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -73,17 +63,17 @@
 .rdtPicker td.rdtDisabled,
 .rdtPicker td.rdtDisabled:hover {
   background: none;
-  color: #999999;
+  color: #bfc8d1;
   cursor: not-allowed;
 }
 
 .rdtPicker td span.rdtOld {
-  color: #999999;
+  color: #bfc8d1;
 }
 .rdtPicker td span.rdtDisabled,
 .rdtPicker td span.rdtDisabled:hover {
   background: none;
-  color: #999999;
+  color: #bfc8d1;
   cursor: not-allowed;
 }
 .rdtPicker th {
@@ -116,14 +106,27 @@
 .rdtPicker th.rdtDisabled,
 .rdtPicker th.rdtDisabled:hover {
   background: none;
-  color: #999999;
+  color: #bfc8d1;
   cursor: not-allowed;
 }
 .rdtPicker thead tr:first-child th {
   cursor: pointer;
+  padding: 0 0 10px 0;
 }
 .rdtPicker thead tr:first-child th:hover {
   background: #eeeeee;
+}
+.rdtPicker th{
+  font-weight: 400;
+}
+.rdtPicker thead tr:nth-child(1){
+
+  color:#000 !important;
+}
+.rdtPicker thead tr:nth-child(2){
+  background: #f6f8fa;
+  border-radius: 10px;
+  font-size: 14px;
 }
 
 .rdtPicker tfoot {
@@ -206,4 +209,17 @@ td.rdtYear:hover {
   width: 100%;
   font-size: 1.2em;
   margin-top: 37px;
+}
+.rdtDay{
+  font-size: 16px;
+}
+.rdtSwitch{
+  font-size: 20px;
+}
+table{
+  border-spacing: 0px 2px;
+  color: #bfc8d1;
+  tr{
+    font-weight: normal;
+  }
 }

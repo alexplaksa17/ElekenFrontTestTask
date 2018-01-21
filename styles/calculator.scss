@@ -1,48 +1,39 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Roboto:500');
-.calculator__inputs{
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+.calculator__block{
   display:flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items:flex-start;
-  background-color: #ffffff;
-  font-family: 'Roboto', sans-serif;
-  .picker{
-    background-color: #f2f3f4;
-    border-radius: 3px;
-    margin: 5px 20px 50px 10px;
-    padding: 20px;
-    p{
-      font-size: 10px;
-      color:#222634;
-    }
-    input{
-      border: none;
-      background-color: #f2f3f4;
-
-
-    }
-
-  }
-
-}
-.output{
-  display:flex;
+  flex: 1;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items:flex-start;
-  background-color: #f2f3f4;
+  justify-content: space-around;
   font-family: 'Roboto', sans-serif;
-  margin: 5px 20px 50px 10px;
-  padding: 20px;
-  p{
-    font-size: 10px;
-    color:#222634;
-  }
-  span{
-    border: none;
-    background-color: #f2f3f4;
-  }
+  .rowo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex: 1;
+    margin-bottom: 30px;
+    .output{
+      margin-left: 10px;
+    }
+    .picker{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items:flex-start;
+      background-color: #f2f3f4;
+      border-radius: 3px;
+      padding:7px 45px 7px 7px;
 
+      .input__name{
+        font-size: 10px;
+        margin-bottom: 5px;
 
+      }
+      .input__value{
+        font-size: 18px;
+      }
+    }
+  }
 }
